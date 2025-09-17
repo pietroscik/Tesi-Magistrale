@@ -1,0 +1,70 @@
+
+Call:spatialreg::errorsarlm(formula = fml, data = sf_obj, listw = listw, 
+    zero.policy = TRUE)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-1.943190 -0.225990  0.051071  0.249456  3.158676 
+
+Type: error 
+Coefficients: (asymptotic standard errors) 
+                                             Estimate Std. Error  z value
+(Intercept)                                 0.3991574  0.0425424   9.3826
+ROE_percentuale                             0.2630631  0.0059753  44.0248
+ROI_percentuale                             0.5972410  0.0096044  62.1838
+ROS_percentuale                            -0.0159139  0.0097062  -1.6396
+ROA_percentuale                            -0.0104294  0.0111018  -0.9394
+EBITDA_migl_EUR                            -3.4591257  0.6365254  -5.4344
+utile_netto_migl_EUR                       -0.8282738  0.3641088  -2.2748
+patrimonio_netto_migl_EUR                  -2.7281838  0.1158901 -23.5411
+posizione_finanziaria_netta_migl_EUR       -0.2271586  0.0755990  -3.0048
+debt_equity_ratio_percentuale               0.0442981  0.0039614  11.1825
+debt_EBITDA_ratio_percentuale              -0.0309846  0.0042984  -7.2085
+dipendenti                                  4.2379093  0.2526075  16.7767
+ricavi_pro_capite_EUR                       0.0471901  0.0115284   4.0934
+valore_aggiunto_pro_capite_EUR             -0.0048054  0.0086940  -0.5527
+rendimento_dipendenti                      -0.0485467  0.0083720  -5.7987
+indice_liquidita                            0.0540978  0.0123238   4.3897
+indice_corrente                            -0.0453033  0.0121033  -3.7430
+flusso_cassa_gestione_migl_EUR              5.0199646  0.7433551   6.7531
+giacenza_media_scorte_gg                   -0.0621106  0.0159721  -3.8887
+durata_media_crediti_lordo_IVA_gg          -0.0488833  0.0152713  -3.2010
+durata_media_debiti_lordo_IVA_gg            0.0445399  0.0101223   4.4002
+incidenza_circolante_operativo_percentuale  0.1078744  0.0204027   5.2873
+integrazione_verticale                     -0.3112877  0.0066361 -46.9084
+                                            Pr(>|z|)
+(Intercept)                                < 2.2e-16
+ROE_percentuale                            < 2.2e-16
+ROI_percentuale                            < 2.2e-16
+ROS_percentuale                            0.1010966
+ROA_percentuale                            0.3475084
+EBITDA_migl_EUR                            5.498e-08
+utile_netto_migl_EUR                       0.0229181
+patrimonio_netto_migl_EUR                  < 2.2e-16
+posizione_finanziaria_netta_migl_EUR       0.0026577
+debt_equity_ratio_percentuale              < 2.2e-16
+debt_EBITDA_ratio_percentuale              5.660e-13
+dipendenti                                 < 2.2e-16
+ricavi_pro_capite_EUR                      4.251e-05
+valore_aggiunto_pro_capite_EUR             0.5804532
+rendimento_dipendenti                      6.683e-09
+indice_liquidita                           1.135e-05
+indice_corrente                            0.0001818
+flusso_cassa_gestione_migl_EUR             1.447e-11
+giacenza_media_scorte_gg                   0.0001008
+durata_media_crediti_lordo_IVA_gg          0.0013695
+durata_media_debiti_lordo_IVA_gg           1.082e-05
+incidenza_circolante_operativo_percentuale 1.242e-07
+integrazione_verticale                     < 2.2e-16
+
+Lambda: 0.31873, LR test value: 95.053, p-value: < 2.22e-16
+Asymptotic standard error: 0.030476
+    z-value: 10.458, p-value: < 2.22e-16
+Wald statistic: 109.38, p-value: < 2.22e-16
+
+Log likelihood: -3330.061 for error model
+ML residual variance (sigma squared): 0.1216, (sigma: 0.34871)
+Number of observations: 9068 
+Number of parameters estimated: 25 
+AIC: 6710.1, (AIC for lm: 6803.2)
+

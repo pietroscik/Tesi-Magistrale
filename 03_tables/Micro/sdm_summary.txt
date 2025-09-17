@@ -1,0 +1,116 @@
+
+Call:spatialreg::lagsarlm(formula = fml, data = sf_obj, listw = listw, 
+    type = "mixed", zero.policy = TRUE)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-1.540044 -0.219276 -0.026536  0.259927  1.138118 
+
+Type: mixed 
+Coefficients: (asymptotic standard errors) 
+                                                 Estimate Std. Error
+(Intercept)                                     -1.164343   6.215264
+ROE_percentuale                                  0.257775   0.018521
+ROI_percentuale                                  0.630477   0.041687
+ROS_percentuale                                 -0.010284   0.026870
+ROA_percentuale                                 -0.006958   0.045560
+EBITDA_migl_EUR                                -11.932795   8.348853
+utile_netto_migl_EUR                            -1.726673   5.125760
+patrimonio_netto_migl_EUR                       -1.856841   0.447090
+posizione_finanziaria_netta_migl_EUR            -1.395318   0.874468
+debt_equity_ratio_percentuale                    0.035650   0.012185
+debt_EBITDA_ratio_percentuale                   -0.013120   0.016569
+dipendenti                                      14.228879   5.180569
+ricavi_pro_capite_EUR                            0.106011   0.034750
+valore_aggiunto_pro_capite_EUR                  -0.052523   0.027723
+rendimento_dipendenti                           -0.065140   0.021429
+indice_liquidita                                 0.043701   0.037416
+indice_corrente                                 -0.052968   0.038406
+flusso_cassa_gestione_migl_EUR                   4.480240  10.135856
+giacenza_media_scorte_gg                        -0.054531   0.042584
+durata_media_crediti_lordo_IVA_gg               -0.046784   0.040701
+durata_media_debiti_lordo_IVA_gg                 0.058892   0.023626
+incidenza_circolante_operativo_percentuale       0.058097   0.055077
+integrazione_verticale                          -0.346290   0.022053
+lag.ROE_percentuale                              0.090607   0.100037
+lag.ROI_percentuale                              0.262697   0.252231
+lag.ROS_percentuale                             -0.222660   0.102353
+lag.ROA_percentuale                             -0.290406   0.262466
+lag.EBITDA_migl_EUR                              3.497434  42.575712
+lag.utile_netto_migl_EUR                        23.374564  24.531777
+lag.patrimonio_netto_migl_EUR                    0.194357   1.873875
+lag.posizione_finanziaria_netta_migl_EUR        -2.169868   4.815318
+lag.debt_equity_ratio_percentuale               -0.075455   0.055914
+lag.debt_EBITDA_ratio_percentuale                0.025616   0.079615
+lag.dipendenti                                 -18.450779  31.553355
+lag.ricavi_pro_capite_EUR                       -0.298650   0.156959
+lag.valore_aggiunto_pro_capite_EUR              -0.011224   0.142063
+lag.rendimento_dipendenti                        0.089579   0.090102
+lag.indice_liquidita                             0.028015   0.180631
+lag.indice_corrente                             -0.143965   0.201215
+lag.flusso_cassa_gestione_migl_EUR             -11.717574  52.126382
+lag.giacenza_media_scorte_gg                    -0.429263   0.206157
+lag.durata_media_crediti_lordo_IVA_gg           -0.516583   0.193969
+lag.durata_media_debiti_lordo_IVA_gg             0.216177   0.116112
+lag.incidenza_circolante_operativo_percentuale   0.685133   0.265607
+lag.integrazione_verticale                      -0.037959   0.130714
+                                                z value  Pr(>|z|)
+(Intercept)                                     -0.1873  0.851397
+ROE_percentuale                                 13.9182 < 2.2e-16
+ROI_percentuale                                 15.1243 < 2.2e-16
+ROS_percentuale                                 -0.3827  0.701917
+ROA_percentuale                                 -0.1527  0.878616
+EBITDA_migl_EUR                                 -1.4293  0.152926
+utile_netto_migl_EUR                            -0.3369  0.736221
+patrimonio_netto_migl_EUR                       -4.1532 3.279e-05
+posizione_finanziaria_netta_migl_EUR            -1.5956  0.110574
+debt_equity_ratio_percentuale                    2.9256  0.003437
+debt_EBITDA_ratio_percentuale                   -0.7919  0.428443
+dipendenti                                       2.7466  0.006022
+ricavi_pro_capite_EUR                            3.0507  0.002283
+valore_aggiunto_pro_capite_EUR                  -1.8945  0.058153
+rendimento_dipendenti                           -3.0398  0.002367
+indice_liquidita                                 1.1680  0.242824
+indice_corrente                                 -1.3792  0.167846
+flusso_cassa_gestione_migl_EUR                   0.4420  0.658476
+giacenza_media_scorte_gg                        -1.2805  0.200352
+durata_media_crediti_lordo_IVA_gg               -1.1495  0.250370
+durata_media_debiti_lordo_IVA_gg                 2.4927  0.012677
+incidenza_circolante_operativo_percentuale       1.0548  0.291499
+integrazione_verticale                         -15.7023 < 2.2e-16
+lag.ROE_percentuale                              0.9057  0.365077
+lag.ROI_percentuale                              1.0415  0.297646
+lag.ROS_percentuale                             -2.1754  0.029600
+lag.ROA_percentuale                             -1.1065  0.268531
+lag.EBITDA_migl_EUR                              0.0821  0.934530
+lag.utile_netto_migl_EUR                         0.9528  0.340677
+lag.patrimonio_netto_migl_EUR                    0.1037  0.917392
+lag.posizione_finanziaria_netta_migl_EUR        -0.4506  0.652265
+lag.debt_equity_ratio_percentuale               -1.3495  0.177181
+lag.debt_EBITDA_ratio_percentuale                0.3217  0.747645
+lag.dipendenti                                  -0.5847  0.558717
+lag.ricavi_pro_capite_EUR                       -1.9027  0.057077
+lag.valore_aggiunto_pro_capite_EUR              -0.0790  0.937030
+lag.rendimento_dipendenti                        0.9942  0.320129
+lag.indice_liquidita                             0.1551  0.876747
+lag.indice_corrente                             -0.7155  0.474314
+lag.flusso_cassa_gestione_migl_EUR              -0.2248  0.822141
+lag.giacenza_media_scorte_gg                    -2.0822  0.037323
+lag.durata_media_crediti_lordo_IVA_gg           -2.6632  0.007739
+lag.durata_media_debiti_lordo_IVA_gg             1.8618  0.062632
+lag.incidenza_circolante_operativo_percentuale   2.5795  0.009894
+lag.integrazione_verticale                      -0.2904  0.771513
+
+Rho: -0.037323, LR test value: 0.069942, p-value: 0.79142
+Asymptotic standard error: 0.13019
+    z-value: -0.28668, p-value: 0.77436
+Wald statistic: 0.082184, p-value: 0.77436
+
+Log likelihood: -228.3556 for mixed model
+ML residual variance (sigma squared): 0.1395, (sigma: 0.3735)
+Number of observations: 526 
+Number of parameters estimated: 47 
+AIC: 550.71, (AIC for lm: 548.78)
+LM test for residual autocorrelation
+test value: 2.6002, p-value: 0.10685
+
