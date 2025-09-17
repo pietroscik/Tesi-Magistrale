@@ -1,0 +1,29 @@
+# R specific
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rproj
+# Output temporanei
+*.rds
+*.RData
+*.csv
+*.xlsx
+*.sav
+*.dta
+# Mappe e immagini generate
+#*.png
+#*.jpg
+#*.pdf
+#*.html
+# File di log
+*.log
+*.aux
+*.out
+*.toc
+# Sistema
+.DS_Store
+Thumbs.db
+# Cartelle locali
+data/
+#output/

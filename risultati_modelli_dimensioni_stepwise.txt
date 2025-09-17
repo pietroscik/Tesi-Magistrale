@@ -1,0 +1,788 @@
+===== ANALISI MODELLI PER DIMENSIONE CON SELEZIONE STEPWISE =====
+
+----- MODELLO COMPLETO -----
+
+
+Call:
+lm(formula = formula_curr, data = data_curr)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.80623 -0.21233  0.05687  0.22939  2.72216 
+
+Coefficients:
+                                       Estimate Std. Error t value
+(Intercept)                           1.270e-16  2.548e-03   0.000
+ROI_percentuale                       7.811e-01  3.993e-03 195.588
+ROE_percentuale                       2.729e-01  3.547e-03  76.924
+ROS_percentuale                      -2.404e-01  3.672e-03 -65.465
+rendimento_dipendenti                 4.830e-02  3.014e-03  16.026
+debt_equity_ratio_percentuale         8.496e-02  2.789e-03  30.464
+debt_EBITDA_ratio_percentuale        -3.308e-02  2.902e-03 -11.398
+valore_aggiunto_pro_capite_EUR       -6.753e-02  3.379e-03 -19.987
+giacenza_media_scorte_gg             -3.079e-02  2.620e-03 -11.749
+durata_media_crediti_lordo_IVA_gg    -1.240e-02  2.800e-03  -4.430
+durata_media_debiti_lordo_IVA_gg     -7.715e-02  2.838e-03 -27.183
+utile_netto_migl_EUR                  1.154e-02  2.612e-03   4.418
+posizione_finanziaria_netta_migl_EUR -4.915e-03  2.571e-03  -1.912
+                                     Pr(>|t|)    
+(Intercept)                            1.0000    
+ROI_percentuale                       < 2e-16 ***
+ROE_percentuale                       < 2e-16 ***
+ROS_percentuale                       < 2e-16 ***
+rendimento_dipendenti                 < 2e-16 ***
+debt_equity_ratio_percentuale         < 2e-16 ***
+debt_EBITDA_ratio_percentuale         < 2e-16 ***
+valore_aggiunto_pro_capite_EUR        < 2e-16 ***
+giacenza_media_scorte_gg              < 2e-16 ***
+durata_media_crediti_lordo_IVA_gg    9.48e-06 ***
+durata_media_debiti_lordo_IVA_gg      < 2e-16 ***
+utile_netto_migl_EUR                 9.99e-06 ***
+posizione_finanziaria_netta_migl_EUR   0.0559 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4041 on 25135 degrees of freedom
+Multiple R-squared:  0.8368,	Adjusted R-squared:  0.8367 
+F-statistic: 1.074e+04 on 12 and 25135 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df  logLik    AIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>   <dbl>  <dbl>
+1     0.837         0.837 0.404    10740.       0    12 -12889. 25805.
+# ℹ 4 more variables: BIC <dbl>, deviance <dbl>, df.residual <int>,
+#   nobs <int>
+
+
+----- MODELLO CAMPIONE -----
+
+
+Call:
+lm(formula = formula_curr, data = data_curr)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.80797 -0.20850  0.05904  0.23328  2.13380 
+
+Coefficients:
+                                   Estimate Std. Error t value Pr(>|t|)
+(Intercept)                       -0.004491   0.005763  -0.779  0.43585
+ROI_percentuale                    0.777441   0.008790  88.443  < 2e-16
+ROE_percentuale                    0.286971   0.007889  36.375  < 2e-16
+ROS_percentuale                   -0.245470   0.008284 -29.632  < 2e-16
+rendimento_dipendenti              0.060905   0.006742   9.034  < 2e-16
+debt_equity_ratio_percentuale      0.070744   0.006179  11.450  < 2e-16
+valore_aggiunto_pro_capite_EUR    -0.072991   0.007625  -9.572  < 2e-16
+debt_EBITDA_ratio_percentuale     -0.026969   0.006259  -4.309 1.67e-05
+giacenza_media_scorte_gg          -0.030781   0.005903  -5.215 1.92e-07
+durata_media_crediti_lordo_IVA_gg -0.018377   0.006331  -2.903  0.00371
+durata_media_debiti_lordo_IVA_gg  -0.072317   0.006437 -11.234  < 2e-16
+utile_netto_migl_EUR               0.010536   0.005863   1.797  0.07240
+                                     
+(Intercept)                          
+ROI_percentuale                   ***
+ROE_percentuale                   ***
+ROS_percentuale                   ***
+rendimento_dipendenti             ***
+debt_equity_ratio_percentuale     ***
+valore_aggiunto_pro_capite_EUR    ***
+debt_EBITDA_ratio_percentuale     ***
+giacenza_media_scorte_gg          ***
+durata_media_crediti_lordo_IVA_gg ** 
+durata_media_debiti_lordo_IVA_gg  ***
+utile_netto_migl_EUR              .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4075 on 4988 degrees of freedom
+Multiple R-squared:  0.8357,	Adjusted R-squared:  0.8354 
+F-statistic:  2307 on 11 and 4988 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.836         0.835 0.407     2307.       0    11 -2600. 5226. 5311.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+
+---- MODELLO PER: Micro ----
+
+
+Call:
+lm(formula = nuova_formula, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.2151 -0.1836 -0.0305  0.2391  1.3597 
+
+Coefficients:
+                                   Estimate Std. Error t value Pr(>|t|)
+(Intercept)                       9.269e-17  1.510e-02   0.000 1.000000
+ROI_percentuale                   5.945e-01  1.834e-02  32.411  < 2e-16
+patrimonio_netto_migl_EUR        -7.555e-02  2.014e-02  -3.751 0.000196
+debt_equity_ratio_percentuale     1.557e-01  1.644e-02   9.467  < 2e-16
+debt_EBITDA_ratio_percentuale    -4.978e-02  1.790e-02  -2.781 0.005618
+dipendenti                        2.402e-02  1.917e-02   1.253 0.210704
+ricavi_pro_capite_EUR             1.057e-01  3.043e-02   3.473 0.000558
+valore_aggiunto_pro_capite_EUR   -1.218e-01  2.591e-02  -4.702 3.31e-06
+rendimento_dipendenti            -6.904e-02  2.639e-02  -2.616 0.009164
+flusso_cassa_gestione_migl_EUR    1.761e-02  2.133e-02   0.825 0.409549
+giacenza_media_scorte_gg         -2.519e-02  1.651e-02  -1.526 0.127687
+durata_media_debiti_lordo_IVA_gg  4.929e-02  1.717e-02   2.871 0.004262
+integrazione_verticale           -3.792e-01  2.775e-02 -13.666  < 2e-16
+                                    
+(Intercept)                         
+ROI_percentuale                  ***
+patrimonio_netto_migl_EUR        ***
+debt_equity_ratio_percentuale    ***
+debt_EBITDA_ratio_percentuale    ** 
+dipendenti                          
+ricavi_pro_capite_EUR            ***
+valore_aggiunto_pro_capite_EUR   ***
+rendimento_dipendenti            ** 
+flusso_cassa_gestione_migl_EUR      
+giacenza_media_scorte_gg            
+durata_media_debiti_lordo_IVA_gg ** 
+integrazione_verticale           ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3462 on 513 degrees of freedom
+Multiple R-squared:  0.8829,	Adjusted R-squared:  0.8801 
+F-statistic: 322.2 on 12 and 513 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC
+      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl>
+1     0.883         0.880 0.346      322. 7.12e-230    12  -182.  392.
+# ℹ 4 more variables: BIC <dbl>, deviance <dbl>, df.residual <int>,
+#   nobs <int>
+
+===========================================
+
+---- MODELLO PER: Piccola ----
+
+
+Call:
+lm(formula = nuova_formula, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.7980 -0.1989  0.0336  0.2116  3.3849 
+
+Coefficients:
+                                                                                 Estimate
+(Intercept)                                                                     -0.109316
+ROI_percentuale                                                                  0.738359
+ROS_percentuale                                                                 -0.110110
+utile_netto_migl_EUR                                                             0.121835
+patrimonio_netto_migl_EUR                                                       -0.127872
+posizione_finanziaria_netta_migl_EUR                                             0.010094
+debt_equity_ratio_percentuale                                                    0.095665
+debt_EBITDA_ratio_percentuale                                                   -0.038732
+dipendenti                                                                       0.068081
+valore_aggiunto_pro_capite_EUR                                                  -0.006593
+rendimento_dipendenti                                                           -0.022293
+indice_corrente                                                                 -0.010560
+giacenza_media_scorte_gg                                                        -0.022128
+durata_media_crediti_lordo_IVA_gg                                                0.024998
+durata_media_debiti_lordo_IVA_gg                                                 0.008349
+integrazione_verticale                                                          -0.400217
+as.factor(integrazione_verticale_fatt)Basso                                      0.063921
+as.factor(integrazione_verticale_fatt)Medio                                      0.161194
+as.factor(integrazione_verticale_fatt)Alto                                       0.150305
+as.factor(integrazione_verticale_fatt)Molto Alto                                 0.201896
+as.factor(macroarea)Nord-Est                                                    -0.027860
+as.factor(macroarea)Nord-Ovest                                                  -0.003362
+as.factor(macroarea)Sud                                                         -0.077092
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est         0.037541
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est         0.003849
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est          0.115052
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est    0.066735
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest       0.037588
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest       0.032384
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest        0.106032
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest  0.084819
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud              0.008974
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             -0.049523
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              -0.001730
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud         0.023097
+                                                                                Std. Error
+(Intercept)                                                                       0.021184
+ROI_percentuale                                                                   0.006332
+ROS_percentuale                                                                   0.008156
+utile_netto_migl_EUR                                                              0.007049
+patrimonio_netto_migl_EUR                                                         0.005104
+posizione_finanziaria_netta_migl_EUR                                              0.004901
+debt_equity_ratio_percentuale                                                     0.004368
+debt_EBITDA_ratio_percentuale                                                     0.004572
+dipendenti                                                                        0.005318
+valore_aggiunto_pro_capite_EUR                                                    0.005781
+rendimento_dipendenti                                                             0.005837
+indice_corrente                                                                   0.004958
+giacenza_media_scorte_gg                                                          0.004330
+durata_media_crediti_lordo_IVA_gg                                                 0.004489
+durata_media_debiti_lordo_IVA_gg                                                  0.005089
+integrazione_verticale                                                            0.010614
+as.factor(integrazione_verticale_fatt)Basso                                       0.027667
+as.factor(integrazione_verticale_fatt)Medio                                       0.031456
+as.factor(integrazione_verticale_fatt)Alto                                        0.034609
+as.factor(integrazione_verticale_fatt)Molto Alto                                  0.037066
+as.factor(macroarea)Nord-Est                                                      0.021656
+as.factor(macroarea)Nord-Ovest                                                    0.020570
+as.factor(macroarea)Sud                                                           0.023489
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est          0.032404
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est          0.034670
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est           0.035579
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est     0.034923
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest        0.030656
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest        0.032677
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest         0.033801
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest   0.033145
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud               0.037596
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud               0.041073
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud                0.042401
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud          0.039377
+                                                                                t value
+(Intercept)                                                                      -5.160
+ROI_percentuale                                                                 116.603
+ROS_percentuale                                                                 -13.501
+utile_netto_migl_EUR                                                             17.285
+patrimonio_netto_migl_EUR                                                       -25.053
+posizione_finanziaria_netta_migl_EUR                                              2.060
+debt_equity_ratio_percentuale                                                    21.904
+debt_EBITDA_ratio_percentuale                                                    -8.472
+dipendenti                                                                       12.803
+valore_aggiunto_pro_capite_EUR                                                   -1.141
+rendimento_dipendenti                                                            -3.819
+indice_corrente                                                                  -2.130
+giacenza_media_scorte_gg                                                         -5.111
+durata_media_crediti_lordo_IVA_gg                                                 5.569
+durata_media_debiti_lordo_IVA_gg                                                  1.641
+integrazione_verticale                                                          -37.708
+as.factor(integrazione_verticale_fatt)Basso                                       2.310
+as.factor(integrazione_verticale_fatt)Medio                                       5.124
+as.factor(integrazione_verticale_fatt)Alto                                        4.343
+as.factor(integrazione_verticale_fatt)Molto Alto                                  5.447
+as.factor(macroarea)Nord-Est                                                     -1.286
+as.factor(macroarea)Nord-Ovest                                                   -0.163
+as.factor(macroarea)Sud                                                          -3.282
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est          1.159
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est          0.111
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est           3.234
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est     1.911
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest        1.226
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest        0.991
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest         3.137
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest   2.559
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud               0.239
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud              -1.206
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud               -0.041
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud          0.587
+                                                                                Pr(>|t|)
+(Intercept)                                                                     2.52e-07
+ROI_percentuale                                                                  < 2e-16
+ROS_percentuale                                                                  < 2e-16
+utile_netto_migl_EUR                                                             < 2e-16
+patrimonio_netto_migl_EUR                                                        < 2e-16
+posizione_finanziaria_netta_migl_EUR                                            0.039459
+debt_equity_ratio_percentuale                                                    < 2e-16
+debt_EBITDA_ratio_percentuale                                                    < 2e-16
+dipendenti                                                                       < 2e-16
+valore_aggiunto_pro_capite_EUR                                                  0.254101
+rendimento_dipendenti                                                           0.000135
+indice_corrente                                                                 0.033206
+giacenza_media_scorte_gg                                                        3.28e-07
+durata_media_crediti_lordo_IVA_gg                                               2.63e-08
+durata_media_debiti_lordo_IVA_gg                                                0.100896
+integrazione_verticale                                                           < 2e-16
+as.factor(integrazione_verticale_fatt)Basso                                     0.020887
+as.factor(integrazione_verticale_fatt)Medio                                     3.05e-07
+as.factor(integrazione_verticale_fatt)Alto                                      1.42e-05
+as.factor(integrazione_verticale_fatt)Molto Alto                                5.26e-08
+as.factor(macroarea)Nord-Est                                                    0.198302
+as.factor(macroarea)Nord-Ovest                                                  0.870186
+as.factor(macroarea)Sud                                                         0.001034
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est        0.246671
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est        0.911594
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est         0.001226
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est   0.056045
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest      0.220195
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest      0.321695
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest       0.001713
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest 0.010512
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud             0.811358
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             0.227956
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              0.967455
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud        0.557517
+                                                                                   
+(Intercept)                                                                     ***
+ROI_percentuale                                                                 ***
+ROS_percentuale                                                                 ***
+utile_netto_migl_EUR                                                            ***
+patrimonio_netto_migl_EUR                                                       ***
+posizione_finanziaria_netta_migl_EUR                                            *  
+debt_equity_ratio_percentuale                                                   ***
+debt_EBITDA_ratio_percentuale                                                   ***
+dipendenti                                                                      ***
+valore_aggiunto_pro_capite_EUR                                                     
+rendimento_dipendenti                                                           ***
+indice_corrente                                                                 *  
+giacenza_media_scorte_gg                                                        ***
+durata_media_crediti_lordo_IVA_gg                                               ***
+durata_media_debiti_lordo_IVA_gg                                                   
+integrazione_verticale                                                          ***
+as.factor(integrazione_verticale_fatt)Basso                                     *  
+as.factor(integrazione_verticale_fatt)Medio                                     ***
+as.factor(integrazione_verticale_fatt)Alto                                      ***
+as.factor(integrazione_verticale_fatt)Molto Alto                                ***
+as.factor(macroarea)Nord-Est                                                       
+as.factor(macroarea)Nord-Ovest                                                     
+as.factor(macroarea)Sud                                                         ** 
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est         ** 
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est   .  
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest       ** 
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest *  
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud                
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud                
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud                 
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud           
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3658 on 9036 degrees of freedom
+Multiple R-squared:  0.8667,	Adjusted R-squared:  0.8662 
+F-statistic:  1727 on 34 and 9036 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.867         0.866 0.366     1727.       0    34 -3732. 7536. 7792.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+===========================================
+
+---- MODELLO PER: Media ----
+
+
+Call:
+lm(formula = nuova_formula, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.1878 -0.1984  0.0589  0.2190  4.0369 
+
+Coefficients:
+                                                                                  Estimate
+(Intercept)                                                                     -0.1655324
+ROI_percentuale                                                                  0.8717437
+ROS_percentuale                                                                 -0.1391266
+EBITDA_migl_EUR                                                                 -0.0895106
+utile_netto_migl_EUR                                                             0.1222554
+patrimonio_netto_migl_EUR                                                       -0.0590057
+posizione_finanziaria_netta_migl_EUR                                             0.0199217
+debt_equity_ratio_percentuale                                                    0.1126521
+debt_EBITDA_ratio_percentuale                                                   -0.0320160
+dipendenti                                                                       0.0401028
+rendimento_dipendenti                                                           -0.0496183
+indice_corrente                                                                 -0.0008735
+giacenza_media_scorte_gg                                                        -0.0070588
+durata_media_crediti_lordo_IVA_gg                                                0.0186556
+durata_media_debiti_lordo_IVA_gg                                                -0.0156650
+integrazione_verticale                                                          -0.2798959
+as.factor(integrazione_verticale_fatt)Basso                                      0.0842226
+as.factor(integrazione_verticale_fatt)Medio                                      0.1740200
+as.factor(integrazione_verticale_fatt)Alto                                       0.2330324
+as.factor(integrazione_verticale_fatt)Molto Alto                                 0.1888818
+as.factor(macroarea)Nord-Est                                                     0.0199954
+as.factor(macroarea)Nord-Ovest                                                   0.0707229
+as.factor(macroarea)Sud                                                         -0.0084015
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est         0.0028802
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est        -0.0219275
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est          0.0098174
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est    0.0447864
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest      -0.0352863
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest      -0.0474498
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest       -0.0326767
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest  0.0334382
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud             -0.0019371
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             -0.0937463
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              -0.0805823
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud        -0.1002082
+                                                                                Std. Error
+(Intercept)                                                                      0.0293439
+ROI_percentuale                                                                  0.0061878
+ROS_percentuale                                                                  0.0079274
+EBITDA_migl_EUR                                                                  0.0077005
+utile_netto_migl_EUR                                                             0.0074074
+patrimonio_netto_migl_EUR                                                        0.0048444
+posizione_finanziaria_netta_migl_EUR                                             0.0045921
+debt_equity_ratio_percentuale                                                    0.0041102
+debt_EBITDA_ratio_percentuale                                                    0.0042389
+dipendenti                                                                       0.0049390
+rendimento_dipendenti                                                            0.0052008
+indice_corrente                                                                  0.0047269
+giacenza_media_scorte_gg                                                         0.0040245
+durata_media_crediti_lordo_IVA_gg                                                0.0043243
+durata_media_debiti_lordo_IVA_gg                                                 0.0046802
+integrazione_verticale                                                           0.0105630
+as.factor(integrazione_verticale_fatt)Basso                                      0.0332777
+as.factor(integrazione_verticale_fatt)Medio                                      0.0351082
+as.factor(integrazione_verticale_fatt)Alto                                       0.0380449
+as.factor(integrazione_verticale_fatt)Molto Alto                                 0.0423366
+as.factor(macroarea)Nord-Est                                                     0.0286859
+as.factor(macroarea)Nord-Ovest                                                   0.0273155
+as.factor(macroarea)Sud                                                          0.0313043
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est         0.0381659
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est         0.0366460
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est          0.0367918
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est    0.0378349
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest       0.0365747
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest       0.0350060
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest        0.0351790
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest  0.0359378
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud              0.0437800
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud              0.0438524
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud               0.0433414
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud         0.0420252
+                                                                                t value
+(Intercept)                                                                      -5.641
+ROI_percentuale                                                                 140.882
+ROS_percentuale                                                                 -17.550
+EBITDA_migl_EUR                                                                 -11.624
+utile_netto_migl_EUR                                                             16.505
+patrimonio_netto_migl_EUR                                                       -12.180
+posizione_finanziaria_netta_migl_EUR                                              4.338
+debt_equity_ratio_percentuale                                                    27.408
+debt_EBITDA_ratio_percentuale                                                    -7.553
+dipendenti                                                                        8.120
+rendimento_dipendenti                                                            -9.540
+indice_corrente                                                                  -0.185
+giacenza_media_scorte_gg                                                         -1.754
+durata_media_crediti_lordo_IVA_gg                                                 4.314
+durata_media_debiti_lordo_IVA_gg                                                 -3.347
+integrazione_verticale                                                          -26.498
+as.factor(integrazione_verticale_fatt)Basso                                       2.531
+as.factor(integrazione_verticale_fatt)Medio                                       4.957
+as.factor(integrazione_verticale_fatt)Alto                                        6.125
+as.factor(integrazione_verticale_fatt)Molto Alto                                  4.461
+as.factor(macroarea)Nord-Est                                                      0.697
+as.factor(macroarea)Nord-Ovest                                                    2.589
+as.factor(macroarea)Sud                                                          -0.268
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est          0.075
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est         -0.598
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est           0.267
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est     1.184
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest       -0.965
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest       -1.355
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest        -0.929
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest   0.930
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud              -0.044
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud              -2.138
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud               -1.859
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud         -2.384
+                                                                                Pr(>|t|)
+(Intercept)                                                                     1.73e-08
+ROI_percentuale                                                                  < 2e-16
+ROS_percentuale                                                                  < 2e-16
+EBITDA_migl_EUR                                                                  < 2e-16
+utile_netto_migl_EUR                                                             < 2e-16
+patrimonio_netto_migl_EUR                                                        < 2e-16
+posizione_finanziaria_netta_migl_EUR                                            1.45e-05
+debt_equity_ratio_percentuale                                                    < 2e-16
+debt_EBITDA_ratio_percentuale                                                   4.56e-14
+dipendenti                                                                      5.12e-16
+rendimento_dipendenti                                                            < 2e-16
+indice_corrente                                                                 0.853403
+giacenza_media_scorte_gg                                                        0.079462
+durata_media_crediti_lordo_IVA_gg                                               1.61e-05
+durata_media_debiti_lordo_IVA_gg                                                0.000819
+integrazione_verticale                                                           < 2e-16
+as.factor(integrazione_verticale_fatt)Basso                                     0.011389
+as.factor(integrazione_verticale_fatt)Medio                                     7.27e-07
+as.factor(integrazione_verticale_fatt)Alto                                      9.33e-10
+as.factor(integrazione_verticale_fatt)Molto Alto                                8.21e-06
+as.factor(macroarea)Nord-Est                                                    0.485788
+as.factor(macroarea)Nord-Ovest                                                  0.009634
+as.factor(macroarea)Sud                                                         0.788411
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est        0.939845
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est        0.549610
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est         0.789599
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est   0.236543
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest      0.334677
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest      0.175290
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest       0.352975
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest 0.352157
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud             0.964709
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             0.032555
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              0.063016
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud        0.017118
+                                                                                   
+(Intercept)                                                                     ***
+ROI_percentuale                                                                 ***
+ROS_percentuale                                                                 ***
+EBITDA_migl_EUR                                                                 ***
+utile_netto_migl_EUR                                                            ***
+patrimonio_netto_migl_EUR                                                       ***
+posizione_finanziaria_netta_migl_EUR                                            ***
+debt_equity_ratio_percentuale                                                   ***
+debt_EBITDA_ratio_percentuale                                                   ***
+dipendenti                                                                      ***
+rendimento_dipendenti                                                           ***
+indice_corrente                                                                    
+giacenza_media_scorte_gg                                                        .  
+durata_media_crediti_lordo_IVA_gg                                               ***
+durata_media_debiti_lordo_IVA_gg                                                ***
+integrazione_verticale                                                          ***
+as.factor(integrazione_verticale_fatt)Basso                                     *  
+as.factor(integrazione_verticale_fatt)Medio                                     ***
+as.factor(integrazione_verticale_fatt)Alto                                      ***
+as.factor(integrazione_verticale_fatt)Molto Alto                                ***
+as.factor(macroarea)Nord-Est                                                       
+as.factor(macroarea)Nord-Ovest                                                  ** 
+as.factor(macroarea)Sud                                                            
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est            
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est      
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest          
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest    
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud                
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             *  
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              .  
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud        *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4137 on 12320 degrees of freedom
+Multiple R-squared:  0.8293,	Adjusted R-squared:  0.8288 
+F-statistic:  1760 on 34 and 12320 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik    AIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl>  <dbl>
+1     0.829         0.829 0.414     1760.       0    34 -6610. 13292.
+# ℹ 4 more variables: BIC <dbl>, deviance <dbl>, df.residual <int>,
+#   nobs <int>
+
+===========================================
+
+---- MODELLO PER: Grande ----
+
+
+Call:
+lm(formula = nuova_formula, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.0480 -0.2199  0.0629  0.2324  2.6191 
+
+Coefficients:
+                                                                                 Estimate
+(Intercept)                                                                     -0.114289
+ROI_percentuale                                                                  0.859970
+ROS_percentuale                                                                 -0.149461
+EBITDA_migl_EUR                                                                  0.003279
+utile_netto_migl_EUR                                                             0.088068
+patrimonio_netto_migl_EUR                                                       -0.079095
+debt_equity_ratio_percentuale                                                    0.109277
+debt_EBITDA_ratio_percentuale                                                   -0.034363
+valore_aggiunto_pro_capite_EUR                                                  -0.042475
+rendimento_dipendenti                                                           -0.026419
+indice_liquidita                                                                 0.026629
+giacenza_media_scorte_gg                                                         0.012480
+durata_media_crediti_lordo_IVA_gg                                               -0.004374
+durata_media_debiti_lordo_IVA_gg                                                -0.043133
+integrazione_verticale                                                          -0.246796
+as.factor(integrazione_verticale_fatt)Basso                                      0.054286
+as.factor(integrazione_verticale_fatt)Medio                                      0.023133
+as.factor(integrazione_verticale_fatt)Alto                                       0.282970
+as.factor(integrazione_verticale_fatt)Molto Alto                                 0.150349
+as.factor(macroarea)Nord-Est                                                    -0.015105
+as.factor(macroarea)Nord-Ovest                                                  -0.032782
+as.factor(macroarea)Sud                                                         -0.039295
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est         0.059380
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est         0.130992
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est         -0.047639
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est    0.028810
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest       0.004945
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest       0.136641
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest       -0.074692
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest  0.126327
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud             -0.021546
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud             -0.012814
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud              -0.158354
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud        -0.024416
+                                                                                Std. Error
+(Intercept)                                                                       0.066358
+ROI_percentuale                                                                   0.012189
+ROS_percentuale                                                                   0.014736
+EBITDA_migl_EUR                                                                   0.013727
+utile_netto_migl_EUR                                                              0.014270
+patrimonio_netto_migl_EUR                                                         0.016718
+debt_equity_ratio_percentuale                                                     0.009608
+debt_EBITDA_ratio_percentuale                                                     0.010507
+valore_aggiunto_pro_capite_EUR                                                    0.013075
+rendimento_dipendenti                                                             0.012910
+indice_liquidita                                                                  0.009981
+giacenza_media_scorte_gg                                                          0.009124
+durata_media_crediti_lordo_IVA_gg                                                 0.009650
+durata_media_debiti_lordo_IVA_gg                                                  0.010485
+integrazione_verticale                                                            0.025152
+as.factor(integrazione_verticale_fatt)Basso                                       0.074097
+as.factor(integrazione_verticale_fatt)Medio                                       0.085004
+as.factor(integrazione_verticale_fatt)Alto                                        0.087520
+as.factor(integrazione_verticale_fatt)Molto Alto                                  0.093019
+as.factor(macroarea)Nord-Est                                                      0.065848
+as.factor(macroarea)Nord-Ovest                                                    0.059951
+as.factor(macroarea)Sud                                                           0.077013
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est          0.087255
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est          0.090590
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est           0.086663
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est     0.081584
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest        0.080900
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest        0.084294
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest         0.080527
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest   0.074256
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud               0.110186
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud               0.115801
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud                0.110211
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud          0.096396
+                                                                                t value
+(Intercept)                                                                      -1.722
+ROI_percentuale                                                                  70.554
+ROS_percentuale                                                                 -10.143
+EBITDA_migl_EUR                                                                   0.239
+utile_netto_migl_EUR                                                              6.172
+patrimonio_netto_migl_EUR                                                        -4.731
+debt_equity_ratio_percentuale                                                    11.374
+debt_EBITDA_ratio_percentuale                                                    -3.270
+valore_aggiunto_pro_capite_EUR                                                   -3.249
+rendimento_dipendenti                                                            -2.046
+indice_liquidita                                                                  2.668
+giacenza_media_scorte_gg                                                          1.368
+durata_media_crediti_lordo_IVA_gg                                                -0.453
+durata_media_debiti_lordo_IVA_gg                                                 -4.114
+integrazione_verticale                                                           -9.812
+as.factor(integrazione_verticale_fatt)Basso                                       0.733
+as.factor(integrazione_verticale_fatt)Medio                                       0.272
+as.factor(integrazione_verticale_fatt)Alto                                        3.233
+as.factor(integrazione_verticale_fatt)Molto Alto                                  1.616
+as.factor(macroarea)Nord-Est                                                     -0.229
+as.factor(macroarea)Nord-Ovest                                                   -0.547
+as.factor(macroarea)Sud                                                          -0.510
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est          0.681
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est          1.446
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est          -0.550
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est     0.353
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest        0.061
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest        1.621
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest        -0.928
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest   1.701
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud              -0.196
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud              -0.111
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud               -1.437
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud         -0.253
+                                                                                Pr(>|t|)
+(Intercept)                                                                      0.08511
+ROI_percentuale                                                                  < 2e-16
+ROS_percentuale                                                                  < 2e-16
+EBITDA_migl_EUR                                                                  0.81120
+utile_netto_migl_EUR                                                            7.61e-10
+patrimonio_netto_migl_EUR                                                       2.33e-06
+debt_equity_ratio_percentuale                                                    < 2e-16
+debt_EBITDA_ratio_percentuale                                                    0.00109
+valore_aggiunto_pro_capite_EUR                                                   0.00117
+rendimento_dipendenti                                                            0.04080
+indice_liquidita                                                                 0.00767
+giacenza_media_scorte_gg                                                         0.17149
+durata_media_crediti_lordo_IVA_gg                                                0.65036
+durata_media_debiti_lordo_IVA_gg                                                3.99e-05
+integrazione_verticale                                                           < 2e-16
+as.factor(integrazione_verticale_fatt)Basso                                      0.46384
+as.factor(integrazione_verticale_fatt)Medio                                      0.78553
+as.factor(integrazione_verticale_fatt)Alto                                       0.00124
+as.factor(integrazione_verticale_fatt)Molto Alto                                 0.10612
+as.factor(macroarea)Nord-Est                                                     0.81858
+as.factor(macroarea)Nord-Ovest                                                   0.58454
+as.factor(macroarea)Sud                                                          0.60992
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est         0.49622
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est         0.14828
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est          0.58256
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est    0.72401
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest       0.95126
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest       0.10512
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest        0.35371
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest  0.08900
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud              0.84498
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud              0.91190
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud               0.15087
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud         0.80006
+                                                                                   
+(Intercept)                                                                     .  
+ROI_percentuale                                                                 ***
+ROS_percentuale                                                                 ***
+EBITDA_migl_EUR                                                                    
+utile_netto_migl_EUR                                                            ***
+patrimonio_netto_migl_EUR                                                       ***
+debt_equity_ratio_percentuale                                                   ***
+debt_EBITDA_ratio_percentuale                                                   ** 
+valore_aggiunto_pro_capite_EUR                                                  ** 
+rendimento_dipendenti                                                           *  
+indice_liquidita                                                                ** 
+giacenza_media_scorte_gg                                                           
+durata_media_crediti_lordo_IVA_gg                                                  
+durata_media_debiti_lordo_IVA_gg                                                ***
+integrazione_verticale                                                          ***
+as.factor(integrazione_verticale_fatt)Basso                                        
+as.factor(integrazione_verticale_fatt)Medio                                        
+as.factor(integrazione_verticale_fatt)Alto                                      ** 
+as.factor(integrazione_verticale_fatt)Molto Alto                                   
+as.factor(macroarea)Nord-Est                                                       
+as.factor(macroarea)Nord-Ovest                                                     
+as.factor(macroarea)Sud                                                            
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Est           
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Est            
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Est      
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Nord-Ovest         
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Nord-Ovest          
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Nord-Ovest .  
+as.factor(integrazione_verticale_fatt)Basso:as.factor(macroarea)Sud                
+as.factor(integrazione_verticale_fatt)Medio:as.factor(macroarea)Sud                
+as.factor(integrazione_verticale_fatt)Alto:as.factor(macroarea)Sud                 
+as.factor(integrazione_verticale_fatt)Molto Alto:as.factor(macroarea)Sud           
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4738 on 3162 degrees of freedom
+Multiple R-squared:  0.7778,	Adjusted R-squared:  0.7755 
+F-statistic: 335.4 on 33 and 3162 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.778         0.775 0.474      335.       0    33 -2131. 4331. 4544.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+===========================================
+
