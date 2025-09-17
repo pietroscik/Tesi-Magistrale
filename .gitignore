@@ -1,29 +1,42 @@
-# R specific
+# --- R specific ---
 .Rhistory
 .RData
 .Rproj.user/
 .Ruserdata
 .Rproj
-# Output temporanei
-*.rds
-*.RData
-*.csv
-*.xlsx
+
+# --- Dati grezzi (non versionare) ---
+dataset*.xlsx
+dataset*.csv
 *.sav
 *.dta
-# Mappe e immagini generate
-#*.png
-#*.jpg
-#*.pdf
-#*.html
-# File di log
+matrice.rds
+
+# --- Shapefile GIS ---
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.qpj
+
+# --- Output analitici pesanti ---
+*.rds
+*.RData
+/04_html/
+02_maps/**/gwr_coefficients_collection.pdf
+02_maps/**/gi_map.pdf
+
+# --- Log e temporanei ---
 *.log
 *.aux
 *.out
 *.toc
-# Sistema
+
+# --- Sistema ---
 .DS_Store
 Thumbs.db
-# Cartelle locali
+
+# --- Cartelle locali ---
 data/
 #output/
